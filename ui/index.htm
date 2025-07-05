@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Search</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-camera"></i> Visual Search</h1>
+        <p class="subtitle">
+          Upload an image to identify football players and find information
+        </p>
+      </header>
+
+      <main>
+        <div class="upload-container">
+          <div class="upload-area" id="uploadArea">
+            <div class="upload-content">
+              <i class="fas fa-cloud-upload-alt upload-icon"></i>
+              <p class="upload-text">Drag & drop image here</p>
+              <p class="upload-subtext">or</p>
+              <label for="fileInput" class="btn">Browse Files</label>
+              <small class="upload-subtext"
+                >Supports JPG, PNG, WEBP (Max 10MB)</small
+              >
+            </div>
+            <input type="file" id="fileInput" accept="image/*" />
+          </div>
+        </div>
+
+        <div class="preview-container">
+          <div class="preview" id="preview">
+            <img
+              src=""
+              alt="Image preview"
+              id="imagePreview"
+              class="preview-image"
+            />
+          </div>
+
+          <div class="actions">
+            <button id="classifyBtn" class="btn" disabled>
+              <i class="fas fa-search"></i> Identify Person
+            </button>
+          </div>
+        </div>
+
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <p>Analyzing image...</p>
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="results" id="results">
+          <!-- Results will be inserted here by JavaScript -->
+        </div>
+      </main>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
